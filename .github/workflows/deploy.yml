@@ -10,6 +10,10 @@ permissions:
   pages: write
   id-token: write
 
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -25,8 +29,12 @@ jobs:
       - name: Install deps
         run: npm ci || npm i
 
-      - name: Build
+      - name: Build site
         run: npm run build
+
+      # Configures Pages and uploads the static site artifact
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
