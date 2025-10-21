@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Background gradient + phone framing */
+html, body, #root { height: 100%; }
+body {
+  @apply bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white;
+}
+
+/* Glass card */
+.glass {
+  @apply bg-white/10 backdrop-blur-md rounded-2xl border border-white/10 shadow-glow;
+}
+
+/* Simple modal backdrop */
+.modal-backdrop { @apply fixed inset-0 bg-black/60 flex items-center justify-center p-4 z-50; }
+.modal-panel { @apply glass w-full max-w-2xl p-5; }
