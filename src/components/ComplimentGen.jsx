@@ -105,7 +105,7 @@ export default function ComplimentGen() {
   return (
     <div>
       <p className="text-white/80 mb-3">
-        <span className="hidden sm:inline">Today’s quote by default.</span> Switch to <b>Tech</b> for engineering quotes. Use <b>Refresh</b> for a new one.
+        <span className="hidden sm:inline">Today’s quote.</span> Switch to <b>Tech</b> for engineering quotes. Use <b>Refresh</b> for a new one.
       </p>
 
       {/* Mode switch */}
