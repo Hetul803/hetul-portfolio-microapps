@@ -44,12 +44,14 @@ export default function App() {
       tech: 'CoinDesk API • React'
     },
     {
-      key: 'compliment',
-      title: 'Compliment Me',
-      emoji: '✨',
-      blurb: 'One‑tap instant positivity.',
+
+      key: 'compliment',               // keep key the same
+      title: 'Quote of the Day',       // new title
+      emoji: '🧠',
+      blurb: 'Today’s quote + Tech mode',
       component: <ComplimentGen />,
-      tech: 'complimentr API • React'
+      tech: 'ZenQuotes • Quotable'
+
     },
   ]
 
